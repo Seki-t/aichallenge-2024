@@ -215,6 +215,11 @@
     <remap from="output/control_cmd" to="/control/command/control_cmd"/>
   </node>
 
+  <!-- Edit -->
+  <node pkg="alert_pitstop" exec="alert_pitstop_node" name="alert_pitstop" output="screen">
+    <remap from="output" to="/aichallenge/pitstop/alert"/>
+  </node>
+
   <!-- Map -->
   <group>
     <push-ros-namespace namespace="map"/>
